@@ -17,7 +17,6 @@ Dockerfile for Python
 
 ## Quick Start
 
-## Quick Start
 
 Here's how to get started...
 
