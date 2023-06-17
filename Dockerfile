@@ -1,4 +1,4 @@
-FROM unionpos/ubuntu:16.04
+FROM unionpos/ubuntu:18.04
 
 # ensure local python is preferred over distribution python
 ENV PATH /usr/local/bin:$PATH
@@ -21,7 +21,9 @@ RUN set -ex \
 	&& savedAptMark="$(apt-mark showmanual)" \
 	&& apt-get update && apt-get install -y --no-install-recommends \
 	dpkg-dev \
+	dirmngr \
 	gcc \
+	gpg-agent \
 	libbz2-dev \
 	libc6-dev \
 	libexpat1-dev \
@@ -94,7 +96,9 @@ RUN set -ex \
 	&& savedAptMark="$(apt-mark showmanual)" \
 	&& apt-get update && apt-get install -y --no-install-recommends \
 	dpkg-dev \
+	dirmngr \
 	gcc \
+	gpg-agent \
 	libbz2-dev \
 	libc6-dev \
 	libexpat1-dev \
